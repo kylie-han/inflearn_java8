@@ -1,4 +1,4 @@
-package me.study.java8to11;
+package me.study.java8to11.java2;
 
 public interface RunSomething {
 

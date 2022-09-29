@@ -1,4 +1,4 @@
-package me.study.java8to11;
+package me.study.java8to11.java2;
 
 public class Foo {
     public static void main(String[] args) {
