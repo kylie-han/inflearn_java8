@@ -2,14 +2,14 @@ package me.study.java8to11.java3;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class Foo {
     public static void main(String[] args) {
 
-        Supplier<Integer> get10 = () -> 10;
-
-        System.out.println(get10.get());
+        Predicate<String> startsWithJihye = s -> s.startsWith("jihye");
+        Predicate<Integer> isOdd = integer -> integer%2 != 0;
 
         /**
          * 기본 함수 메서드
@@ -32,6 +32,10 @@ public class Foo {
          *     T get()
          * T 타입의 값을 제공하는 함수 인터페이스
          *
+         * Predicate<T>
+         *     boolean test(T t)
+         * T 타입을 받아서 boolean 을 리턴하는 함수 인터페이스
+         * And, Or, Negate 등의 함수와 조합이 가능하다.
          */
     }
 }
