@@ -1,15 +1,12 @@
 package me.study.java8to11.java3;
 
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class Foo {
     public static void main(String[] args) {
 
-        Predicate<String> startsWithJihye = s -> s.startsWith("jihye");
-        Predicate<Integer> isOdd = integer -> integer%2 != 0;
+        Function<Integer, Integer> plus10 = integer -> integer + 10;
+        UnaryOperator<Integer> unaryPlus10 = integer -> integer + 10;
 
         /**
          * 기본 함수 메서드
@@ -36,6 +33,11 @@ public class Foo {
          *     boolean test(T t)
          * T 타입을 받아서 boolean 을 리턴하는 함수 인터페이스
          * And, Or, Negate 등의 함수와 조합이 가능하다.
-         */
+         *
+         * UnaryOperator<T>
+         * Function 의 특수한 형태로, 입력값 하나를 받아서 동일한 타입을 리턴하는 함수 인터페이스
+         *
+         * BinaryOperator<T>
+         * BiFunction 의 특수한 형태로, 동일한 타입의 입력값 두개를 받아 동일한 타입을 리턴하는 함수 인터페이스스         */
     }
 }
