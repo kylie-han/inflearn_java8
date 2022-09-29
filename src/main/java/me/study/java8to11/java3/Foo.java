@@ -2,11 +2,15 @@ package me.study.java8to11.java3;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Foo {
     public static void main(String[] args) {
-        Consumer<Integer> printT = (i) -> System.out.println(i);
-        printT.accept(10);
+
+        Supplier<Integer> get10 = () -> 10;
+
+        System.out.println(get10.get());
+
         /**
          * 기본 함수 메서드
          * R apply(T t)
@@ -22,7 +26,11 @@ public class Foo {
          *
          * Consumer<T>
          *     void accept(T t)
-         * T 타입을 받아 아무값도 리턴하지 않는 함수
+         * T 타입을 받아 아무값도 리턴하지 않는 함수 인터페이스
+         *
+         * Supplier<T>
+         *     T get()
+         * T 타입의 값을 제공하는 함수 인터페이스
          *
          */
     }
